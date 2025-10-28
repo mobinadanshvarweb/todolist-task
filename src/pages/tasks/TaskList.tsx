@@ -5,10 +5,13 @@ import TaskCart from "./TaskCart";
 
 const TaskList = () => {
   const tasks = useSelector((state: RootState) => state.tasks.taskList);
+
   return (
-    <div className="flex flex-col gap-2">
-      {tasks.length == 0 ? (
-        <p>No Task Added Yet!</p>
+    <div className="w-full flex flex-col gap-3 ">
+      {tasks.length === 0 ? (
+        <p className="text-center text-customRed text-2xl mt-20 font-bold">
+          No Task Added Yet!
+        </p>
       ) : (
         tasks.map((item: TaskProps) => (
           <TaskCart
