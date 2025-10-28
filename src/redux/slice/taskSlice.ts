@@ -1,26 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit";
+import type { TaskProps } from "../../types/taskType";
 
-// Define a type for the slice state
 export interface TaskState {
-  value: boolean;
+  taskList: TaskProps[];
 }
 
-// Define the initial state using that type
 const initialState: TaskState = {
-  value: false,
+  taskList: JSON.parse(localStorage.getItem("tasks") || "[]"),
 };
 
 export const counterSlice = createSlice({
   name: "task",
-  // `createSlice` will infer the state type from the `initialState` argument
   initialState,
   reducers: {
-    isModalOpen: (state) => {
-      state.value = !state.value;
+    addTask: (state, action) => {
+      state.taskList.push(action.payload);
+      localStorage.setItem("tasks", JSON.stringify(state.taskList));
     },
   },
 });
 
-export const { isModalOpen } = counterSlice.actions;
+export const { addTask } = counterSlice.actions;
 
 export default counterSlice.reducer;
