@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import type { TaskProps } from "../../types/taskType";
 
 export interface TaskState {
@@ -17,9 +17,13 @@ export const counterSlice = createSlice({
       state.taskList.push(action.payload);
       localStorage.setItem("tasks", JSON.stringify(state.taskList));
     },
+    deleteTask: (state, action: PayloadAction<string>) => {
+      state.taskList = state.taskList.filter((t) => t.id !== action.payload);
+      localStorage.setItem("tasks", JSON.stringify(state.taskList));
+    },
   },
 });
 
-export const { addTask } = counterSlice.actions;
+export const { addTask, deleteTask } = counterSlice.actions;
 
 export default counterSlice.reducer;

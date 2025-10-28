@@ -12,7 +12,8 @@ const TaskList = () => {
       ) : (
         tasks.map((item: TaskProps) => (
           <TaskCart
-            key={item.createdAt}
+            key={item.id}
+            id={item.id}
             title={item.title}
             createdAt={item.createdAt}
             description={item.description}
