@@ -78,8 +78,8 @@ pnpm run dev
 
 ## 👨‍💻 Author
 
-**Your Name**
-📧 [your.email@example.com](mailto:mobinadanshvar.gmail@example.com)
+**Mobina Daneshvar**
+📧 [your.email@example.com](mailto:mobinadanshvar@gmail.com)
 🔗 [GitHub Profile](https://github.com/mobinadanshvarweb)
 
 ---
