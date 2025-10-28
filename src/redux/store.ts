@@ -1,8 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
+import TaskReducer from "./slice/taskSlice";
+import modalReducer from "./slice/modalSlice";
 // ...
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    tasks: TaskReducer,
+    modal: modalReducer,
+  },
 });
 
 // Infer the `RootState`,  `AppDispatch`, and `AppStore` types from the store itself
