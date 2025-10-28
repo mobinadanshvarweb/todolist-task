@@ -7,7 +7,7 @@ import TaskList from "./TaskList";
 const Task = () => {
   const dispatch = useDispatch();
   return (
-    <div className="w-1/4 h-96 rounded shadow-2xl bg-[#A18D6D] relative overflow-visible py-4 px-2">
+    <div className="w-full lg:w-1/4 h-96 rounded shadow-2xl bg-[#A18D6D] relative overflow-visible py-4 px-2">
       <div
         className="overflow-y-auto h-full flex flex-col gap-4 p-2  [&::-webkit-scrollbar]:w-1
   [&::-webkit-scrollbar-track]:rounded-full
