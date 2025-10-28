@@ -79,7 +79,7 @@ pnpm run dev
 ## 👨‍💻 Author
 
 **Mobina Daneshvar**
-📧 [your.email@example.com](mailto:mobinadanshvar@gmail.com)
+📧 [mobinadanshvar@gmail.com](mailto:mobinadanshvar@gmail.com)
 🔗 [GitHub Profile](https://github.com/mobinadanshvarweb)
 
 ---
