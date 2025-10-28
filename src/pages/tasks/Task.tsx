@@ -1,8 +1,8 @@
 import Button from "../../components/Button";
 import { IoAddOutline } from "react-icons/io5";
-import TaskCart from "./TaskCart";
 import { useDispatch } from "react-redux";
 import { openModal } from "../../redux/slice/modalSlice";
+import TaskList from "./TaskList";
 
 const Task = () => {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const Task = () => {
   dark:[&::-webkit-scrollbar-track]:bg-neutral-700
   dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500"
       >
-        <TaskCart />
+        <TaskList />
       </div>
       <Button
         title="Add New Task"

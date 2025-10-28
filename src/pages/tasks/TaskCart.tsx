@@ -1,12 +1,13 @@
 import { GrFormEdit } from "react-icons/gr";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import Button from "../../components/Button";
+import type { TaskProps } from "../../types/taskType";
 
-const TaskCart = () => {
+const TaskCart = ({ title, description, createdAt }: TaskProps) => {
   return (
     <div className="w-full rounded bg-background flex flex-col gap-1 p-2">
       <div className="flex justify-between w-full">
-        <h1 className="w-full font-bold text-xl">Title</h1>
+        <h1 className="w-full font-bold text-xl">{title}</h1>
         <div className=" flex gap-2 items-center">
           <span className="">
             <Button
@@ -24,11 +25,9 @@ const TaskCart = () => {
           </span>
         </div>
       </div>
-      <p className="w-full text-sm text-justify">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit Sed?
-      </p>
+      <p className="w-full text-sm text-justify">{description}</p>
       <div className="w-full flex justify-end text-xs text-customBlue">
-        10/28/25
+        {createdAt}
       </div>
     </div>
   );
